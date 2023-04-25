@@ -57,3 +57,5 @@ function listarDados(objeto = obj_padrao) {
 }
 
 listarDados();
+
+console.log(`Teste: ${obj_padrao.basico.nome}`); // descobri que ele trás os dados diretamente mesmo sem declarar uma função :)

@@ -37,7 +37,7 @@ function registro_atividades_2(pessoa = registro_padrao) {
 }
 
 registro_atividades_2();
-*/
+
 
 // const registro_padrao = {nome_completo: {nome: "Transeunte", sobrenome: "da Silva"}, atividade_fav: "Passando"}
 
@@ -59,3 +59,61 @@ function listarDados(objeto = obj_padrao) {
 listarDados();
 
 console.log(`Teste: ${obj_padrao.basico.nome}`); // descobri que ele trás os dados diretamente mesmo sem declarar uma função :)
+
+
+
+const lordify = function(firstName){
+    return `${firstName} of Canterbury`;
+};
+
+console.log(lordify("Dale"));
+
+const lordify_2 = firstName2 => `${firstName2} of Cantersbury2`;
+
+console.log(lordify_2("José"));
+
+
+
+const lordify = function(firstName, land) {
+    return `${firstName} of ${land}`;
+};
+
+console.log(lordify("Eduardo", "Bebamburg"));
+
+const lordify_2 = (nome, lugar) => `${nome} de ${lugar}`;
+
+console.log(lordify_2("Eduardo", "Vila Isabel"));
+
+
+const lordify = (nome, land) => {
+    if(!nome){
+        throw new Error("Informe o nome");
+    }
+    if(!land){
+        throw new Error("Informe a land");
+    }
+
+    return `${nome} de ${land}`;
+}
+
+console.log(lordify("Eduardo", "Vila Isabel"));
+
+*/
+
+const pessoa = (primeiro_nome, segundo_nome) =>
+
+//errado
+//  (
+//      nome: primeiro_nome,
+//      sobrenome: segundo_nome
+//  };
+
+//correto:
+    ({
+        nome: primeiro_nome,
+        sobrenome: segundo_nome
+    });
+
+    console.log(pessoa("Eduardo", "Faria"));
+
+    
